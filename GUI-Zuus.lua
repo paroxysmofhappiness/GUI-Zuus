@@ -128,6 +128,7 @@ function BTW.Combo()
 end
 
 function BTW.Steal()
+	if not BTW.Enabled then return end
 	local staticdmg = 0
 	if Ability.GetLevel(BTW.Abilitys['zuus_static_field']) > 0 then
 		staticdmg = 2 + (2 * Ability.GetLevel(BTW.Abilitys['zuus_static_field']))
@@ -163,6 +164,7 @@ function BTW.Steal()
 end
 
 function BTW.StealCloud()
+	if not BTW.Enabled then return end
 	local staticdmg = 0
 	if Ability.GetLevel(BTW.Abilitys['zuus_static_field']) > 0 then
 		staticdmg = 2 + (2 * Ability.GetLevel(BTW.Abilitys['zuus_static_field']))
