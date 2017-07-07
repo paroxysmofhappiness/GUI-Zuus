@@ -120,14 +120,14 @@ function BTW.Combo()
 	local ordercast = GUI.Get(BTW.Identity .. "ordercombo", 1)
 	if ordercast == nil then return end
     local position = Entity.GetAbsOrigin(enemy)   
-    local manapoint = NPC.GetMana(self)
+    local manapoint = NPC.GetMana(BTW.Hero)
 	
 	local prevcast = nil
 	for i = 1, Length(ordercast) do
 		BTW.Cast(ordercast[i], BTW.Hero, enemy, NPC.GetAbsOrigin(enemy), BTW.MP)
 	end
 
-	if not NPC.HasModifier(hero, "modifier_item_ethereal_blade_slow") and GUI.IsEnabled(BTW.Identity .. "orbwalker") then
+	if not NPC.HasModifier(enemy, "modifier_item_ethereal_blade_slow") and GUI.IsEnabled(BTW.Identity .. "orbwalker") then
 		Player.PrepareUnitOrders(Players.GetLocal(), 4, enemy, Vector(0,0,0), enemy, Enum.PlayerOrderIssuer.DOTA_ORDER_ISSUER_PASSED_UNIT_ONLY, BTW.Hero)
 	end
 end
