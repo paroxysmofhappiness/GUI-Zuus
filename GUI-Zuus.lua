@@ -179,7 +179,7 @@ function BTW.StealCloud()
 	end
 		
 	for n, npc in pairs(Heroes.GetAll()) do	
-		if not Entity.IsDormant(npc) and Entity.IsAlive(npc) and not NPC.IsIllusion(npc) and not NPC.HasState(npc, Enum.ModifierState.MODIFIER_STATE_MAGIC_IMMUNE) then
+		if not Entity.IsDormant(npc) and Entity.IsAlive(npc) and not NPC.IsIllusion(npc) and not Entity.IsSameTeam(BTW.Hero, npc) and not NPC.HasState(npc, Enum.ModifierState.MODIFIER_STATE_MAGIC_IMMUNE) then
 			local boltdmg = Ability.GetDamage(BTW.Abilitys['zuus_lightning_bolt'])
 		
 			if Ability.GetLevel(BTW.Abilitys['zuus_static_field']) > 0 then
