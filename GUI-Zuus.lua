@@ -51,7 +51,7 @@ BTW.Locale = {
 	},
 	["interrupt_fog"] = {
 		["english"] = "Auto interrupt enemy's tp in fog with nimbus",
-		["russian"] = "Прерывать вражеский ТП в тумане войны при помощи bolt или nimbus"
+		["russian"] = "Прерывать вражеский ТП в тумане войны при помощи nimbus"
 	}
 }
 BTW.Hero = nil
