@@ -50,7 +50,7 @@ BTW.Locale = {
 		["russian"] = "Прерывать вражеский ТП или каст способностей при помощи bolt или nimbus"
 	},
 	["interrupt_fog"] = {
-		["english"] = "Auto interrupt enemy's tp in fog with bolt or nimbus",
+		["english"] = "Auto interrupt enemy's tp in fog with nimbus",
 		["russian"] = "Прерывать вражеский ТП в тумане войны при помощи bolt или nimbus"
 	}
 }
@@ -126,7 +126,6 @@ function BTW.OnDraw()
 		GUI.AddMenuItem(BTW.Identity, BTW.Identity .. "closest", BTW.Locale["slider"], GUI.MenuType.Slider, 100, 1500, 200)
 		GUI.AddMenuItem(BTW.Identity, BTW.Identity .. "interrupt", BTW.Locale["interrupt"], GUI.MenuType.CheckBox, 0)
 		GUI.AddMenuItem(BTW.Identity, BTW.Identity .. "interrupt_fog", BTW.Locale["interrupt_fog"], GUI.MenuType.CheckBox, 0)
-
 	end
 	
 	BTW.Initialize()
