@@ -164,7 +164,9 @@ end
 function BTW.OnParticleUpdate(p)
 	if BTW.TPIndex == p.index then
 		local a = NPCs.InRadius(p.position, 50, Entity.GetTeamNum(BTW.Hero), Enum.TeamType.TEAM_FRIEND)
-		if (not a or #a == 0) and GUI.IsEnabled(BTW.Identity .. "interrupt_fog") and BTW.Enabled then BTW.Cast('zuus_cloud', BTW.Hero, nil, p.position, BTW.MP) end
+		if (not a or #a == 0) and GUI.IsEnabled(BTW.Identity .. "interrupt_fog") and BTW.Enabled and p.position:Length2D() > 2 then 
+			BTW.Cast('zuus_cloud', BTW.Hero, nil, p.position, BTW.MP) 
+		end
 	end
 end
 
